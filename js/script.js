@@ -9,7 +9,7 @@
 
   var root = document.documentElement;
   var THEME_KEY = 'sakib-theme';
-  var CONTACT_EMAIL = 'md.sakib.hossain2@gmail.com';
+  var CONTACT_EMAIL = 'md.sakib.hossain2@g.bracu.ac.bd';
   var GITHUB_USER = 'sakibhossain0';
 
   function byId(id) {
