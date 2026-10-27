@@ -300,12 +300,17 @@
         hiddenSubject.value = 'Homepage: ' + subject;
       }
 
-      if (window.location.protocol === 'file:') {
+      /* hand the message to the visitor's own email app so it is never lost */
+      var openMailApp = function () {
         var body = 'From: ' + inputs.name.value.trim() + ' <' + inputs.email.value.trim() + '>\n\n' +
           inputs.message.value.trim();
         window.location.href = 'mailto:' + CONTACT_EMAIL +
           '?subject=' + encodeURIComponent(subject) +
           '&body=' + encodeURIComponent(body);
+      };
+
+      if (window.location.protocol === 'file:') {
+        openMailApp();
         showStatus('Your email app should now open with the message filled in. ' +
           '(The direct-send version works once this site is online.)', 'ok');
         return;
@@ -334,12 +339,18 @@
               '! Your message is on its way to my inbox.', 'ok');
             form.reset();
           } else {
-            showStatus(data.message || 'Something went wrong. Please email me directly.', 'bad');
+            /* e.g. FormSubmit still waiting for activation: don't show its
+               internal message to visitors, just switch to the email app */
+            openMailApp();
+            showStatus('Direct sending is not available right now, so your email app should open ' +
+              'with the message filled in. You can also write to ' + CONTACT_EMAIL + '.', 'bad');
           }
         })
         .catch(function () {
           setSending(false);
-          showStatus('Could not reach the mail service. You can email me at ' + CONTACT_EMAIL + ' instead.', 'bad');
+          openMailApp();
+          showStatus('Could not reach the mail service, so your email app should open with the ' +
+            'message filled in. You can also write to ' + CONTACT_EMAIL + '.', 'bad');
         });
     });
   }
