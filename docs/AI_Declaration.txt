@@ -1,0 +1,72 @@
+============================================================
+           AI USAGE DECLARATION
+============================================================
+
+Name: Sakib Hossain
+Student ID: 23101316
+Assignment: CSE391 Assignment 1 - Personal Homepage
+Date: 2026-10-27
+
+------------------------------------------------------------
+1. AI TOOLS USED (check all that apply)
+------------------------------------------------------------
+[ ] None
+[ ] ChatGPT
+[ ] GitHub Copilot
+[ ] Google Gemini
+[X] Claude
+[ ] Cursor
+[ ] Other: ________________
+
+------------------------------------------------------------
+2. PURPOSE OF AI USE (check all that apply)
+------------------------------------------------------------
+[ ] Learning/understanding concepts
+[X] Debugging my code
+[X] Generating code snippets
+[X] Writing text content
+[X] Design/styling ideas
+[ ] Image generation
+[ ] Other: ________________
+
+------------------------------------------------------------
+3. DESCRIPTION OF AI USE
+------------------------------------------------------------
+Briefly describe what you used AI for and how:
+
+I used Claude (Claude Code) to build this homepage. I gave it my
+personal details, education, hobbies, class routine, photo and the
+assignment brief, and Claude wrote the four Strict XHTML 1.0 pages,
+the stylesheet and the JavaScript, drafted the page text from my
+details, and proposed colour palettes (I chose the Nord theme).
+Claude also validated the pages with the W3C validators.
+
+Later I used Claude to diagnose and fix the contact form's
+email-sending feature (FormSubmit AJAX integration): it found that
+the FormSubmit form had not been activated, and changed the script so
+a failed send falls back to the visitor's email app. I also used
+Claude to review the site for placeholder/demo content (none was
+found).
+
+------------------------------------------------------------
+4. AI-ASSISTED SECTIONS
+------------------------------------------------------------
+List specific files/sections where AI helped significantly:
+
+File: index.html, projects.html, hobbies.html, routine.html Section: All pages (markup and text)
+File: css/style.css, js/theme-init.js Section: Whole files (layout, dark/light theme, animations)
+File: js/script.js Section: Whole file, incl. section 8 contact form (FormSubmit submission and fallback)
+
+------------------------------------------------------------
+5. DECLARATION
+------------------------------------------------------------
+I declare that:
+- This disclosure is complete and accurate
+- I understand all code in my submission
+- I can explain and modify my work if asked
+- I take full responsibility for my submission
+
+Signature: Sakib Hossain
+Date: 2026-10-27
+
+============================================================
