@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Md. Sakib Hossain" />
+  <meta name="description" content="Projects by Md. Sakib Hossain, pulled from GitHub: a Laravel and MySQL pet adoption system, the BRACU Connect Android app, and this website." />
+  <meta name="keywords" content="Md. Sakib Hossain, projects, GitHub, Laravel, MySQL, Android, BRACU Connect" />
+  <meta name="theme-color" content="#2E3440" />
+  <title>Projects | Md. Sakib Hossain</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Lora:ital,wght@1,400;1,500&amp;display=swap" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- External CSS: the shared stylesheet for every page -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- Internal CSS: styles that only the projects page needs -->
+  <style type="text/css">
+    .code-visual pre {
+      margin: 0;
+      padding: 22px;
+      overflow-x: auto;
+      background: #2E3440;
+      color: #D8DEE9;
+      font-family: "JetBrains Mono", Consolas, monospace;
+      font-size: 0.78rem;
+      font-variant-ligatures: none;
+      line-height: 1.7;
+    }
+    .code-visual .tok-tag { color: #81A1C1; }
+    .code-visual .tok-attr { color: #8FBCBB; }
+    .code-visual .tok-str { color: #A3BE8C; }
+    .code-visual .tok-com { color: #8C97AB; font-style: italic; }
+    .next-list li {
+      margin-bottom: 10px;
+    }
+  </style>
+  <script type="text/javascript" src="js/theme-init.js"></script>
+</head>
+
+<body id="top">
+<div id="root">
+
+<!-- Dark/light toggle: this hidden checkbox drives the CSS theme switch -->
+<input type="checkbox" id="theme-switch" class="theme-switch" title="Switch between light and dark mode" />
+
+<div id="page">
+
+<p class="skip-link"><a href="#main">Skip to main content</a></p>
+
+<!-- ========== Header ========== -->
+<div class="site-header" id="header">
+  <div class="wrap">
+    <a class="brand" href="index.html" title="Md. Sakib Hossain, home page">Sakib<span class="dot">.</span><small>CSE @ BRACU</small></a>
+    <div class="nav-area">
+      <div id="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="current">Projects</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="routine.html">Routine</a></li>
+        </ul>
+      </div>
+      <div class="header-tools">
+        <label for="theme-switch" class="theme-toggle" title="Toggle dark and light mode">
+          <span class="when-light"><i class="fa-solid fa-moon"></i> <span class="label">Dark</span></span>
+          <span class="when-dark"><i class="fa-solid fa-sun"></i> <span class="label">Light</span></span>
+        </label>
+        <button type="button" class="nav-btn" id="nav-btn" title="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main">
+
+<!-- ========== Page title ========== -->
+<div class="page-hero">
+  <div class="aurora"><span class="a1"></span><span class="a2"></span></div>
+  <div class="wrap">
+    <p class="crumbs rise"><a href="index.html">Home</a> / Projects</p>
+    <h1 class="rise delay-1">Projects</h1>
+    <p class="lead rise delay-2">Everything here lives on my GitHub account, <a href="https://github.com/sakibhossain0" rel="external">sakibhossain0</a>. I wrote the three project notes below myself. The list further down loads live from the GitHub API, so it stays up to date whenever I push something new.</p>
+    <div class="profile-strip rise delay-3">
+      <!-- Image linked from the web: my GitHub avatar -->
+      <img src="https://avatars.githubusercontent.com/u/195876579?v=4" alt="GitHub avatar of sakibhossain0" width="64" height="64" />
+      <p><strong>MD SAKIB HOSSAIN</strong><br /><span class="muted mono">github.com/sakibhossain0 &middot; <span id="repo-count">public repositories</span></span></p>
+    </div>
+  </div>
+</div>
+
+<!-- ========== Anchor links ========== -->
+<div class="page-nav">
+  <div class="wrap">
+    <p class="label">On this page</p>
+    <ul>
+      <li><a href="#pet-adoption">Pet adoption system</a></li>
+      <li><a href="#bracu-connect">BRACU Connect</a></li>
+      <li><a href="#this-site">This website</a></li>
+      <li><a href="#live">Live from GitHub</a></li>
+      <li><a href="#next">Coming up</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <div class="wrap">
+
+    <!-- ===== Project 1 ===== -->
+    <div class="card project reveal" id="pet-adoption">
+      <div class="project-visual">
+        <!-- Image linked from the web: ER diagram in the project repository -->
+        <img src="https://raw.githubusercontent.com/sakibhossain0/pet-adoption-management-system/main/docs/images/er-diagram.drawio.png" alt="Entity relationship diagram of the pet adoption database" />
+        <p>ER diagram from the project repository</p>
+      </div>
+      <div>
+        <p class="label">CSE370 &middot; Database course project</p>
+        <h2>Pet Adoption Management System</h2>
+        <p>A full-stack web app that brings pets, shelters, adopters, volunteers and admins into one system. Visitors can browse pets, check their medical history, apply to adopt and read success stories. There is also a short quiz that recommends a pet based on your answers.</p>
+        <p>Most of the work went into the database: an ER model, a normalized relational schema, and the primary and foreign keys that connect <strong>eleven modules</strong>.</p>
+        <ul class="feature-list">
+          <li>Search and browse pets, with profiles and medical records</li>
+          <li>Adoption applications that admins can review</li>
+          <li>Shelter, foster parent and donation management</li>
+          <li>Success stories and an activity log</li>
+          <li>A pet-matching quiz</li>
+        </ul>
+        <ul class="chips">
+          <li>Laravel</li>
+          <li>PHP</li>
+          <li>React</li>
+          <li>Vite</li>
+          <li>Tailwind CSS</li>
+          <li>MySQL</li>
+        </ul>
+        <!-- Inline CSS: bar widths and colours come from GitHub's language stats -->
+        <div class="lang-bar" title="Languages in the repository">
+          <span style="width: 38.1%; background: #4F5D95;"></span>
+          <span style="width: 34.3%; background: #F1E05A;"></span>
+          <span style="width: 25.7%; background: #F7523F;"></span>
+          <span style="width: 1.8%; background: #563D7C;"></span>
+          <span style="width: 0.2%; background: #E34C26;"></span>
+        </div>
+        <ul class="lang-legend">
+          <li><b style="background: #4F5D95;"></b>PHP 38.1%</li>
+          <li><b style="background: #F1E05A;"></b>JavaScript 34.3%</li>
+          <li><b style="background: #F7523F;"></b>Blade 25.7%</li>
+          <li><b style="background: #563D7C;"></b>CSS 1.8%</li>
+          <li><b style="background: #E34C26;"></b>HTML 0.2%</li>
+        </ul>
+        <p class="btn-row"><a class="btn btn-primary" href="https://github.com/sakibhossain0/pet-adoption-management-system" rel="external"><i class="fa-brands fa-github"></i> View on GitHub</a></p>
+      </div>
+    </div>
+
+    <!-- ===== Project 2 ===== -->
+    <div class="card project flip reveal" id="bracu-connect">
+      <div class="project-visual">
+        <!-- Images linked from the web: screenshots from the BRACU Connect README -->
+        <div class="app-shots">
+          <img src="https://github.com/user-attachments/assets/8b854476-7adb-42f1-9be6-54bdda24a89c" alt="BRACU Connect home screen" width="190" height="342" />
+          <img src="https://github.com/user-attachments/assets/92212f1b-1fa2-49cf-855b-f92cb9355810" alt="BRACU Connect digital ID card screen" width="190" height="342" />
+        </div>
+        <p>Screenshots from the BRACU Connect README</p>
+      </div>
+      <div>
+        <p class="label">Team project &middot; Android</p>
+        <h2>BRACU Connect</h2>
+        <p>A companion app for BRAC University students that puts the everyday university stuff in one place. I'm one of the developers on the team, all CSE students at BRACU.</p>
+        <ul class="feature-list">
+          <li>CGPA calculator and CGPA analysis</li>
+          <li>Class and exam schedules, plus a deadline tracker</li>
+          <li>Course details and a completed-credits tracker</li>
+          <li>BRACU bus schedule and routes</li>
+          <li>Payment status and a digital ID card</li>
+          <li>Real-time notifications</li>
+        </ul>
+        <p class="muted">Latest release: <span class="hl">v1.7.4</span> for Android. An iOS version is in the works.</p>
+        <p class="btn-row">
+          <a class="btn btn-primary" href="https://github.com/Fahim715/bracu_connect" rel="external"><i class="fa-brands fa-github"></i> View repository</a>
+          <a class="btn btn-ghost" href="https://github.com/Fahim715/bracu_connect/releases/download/v1.7.4/bracu_connect_v1.7.4.apk" rel="external"><i class="fa-solid fa-download"></i> Download APK</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- ===== Project 3 ===== -->
+    <div class="card project reveal" id="this-site">
+      <div class="project-visual code-visual">
+<pre><span class="tok-com">&lt;!-- the first lines of every page --&gt;</span>
+<span class="tok-tag">&lt;!DOCTYPE</span> html PUBLIC
+  <span class="tok-str">"-//W3C//DTD XHTML 1.0 Strict//EN"</span><span class="tok-tag">&gt;</span>
+<span class="tok-tag">&lt;html</span> <span class="tok-attr">xmlns</span>=<span class="tok-str">"http://www.w3.org/1999/xhtml"</span>
+      <span class="tok-attr">xml:lang</span>=<span class="tok-str">"en"</span> <span class="tok-attr">lang</span>=<span class="tok-str">"en"</span><span class="tok-tag">&gt;</span>
+
+<span class="tok-com">/* the whole dark mode, in CSS */</span>
+<span class="tok-attr">#theme-switch:checked ~ #page</span> {
+  --bg: <span class="tok-str">#2E3440</span>;
+  --text: <span class="tok-str">#ECEFF4</span>;
+  --accent: <span class="tok-str">#88C0D0</span>;
+}</pre>
+        <p>A peek at the source of this site</p>
+      </div>
+      <div>
+        <p class="label">CSE391 &middot; Assignment 1</p>
+        <h2>This website</h2>
+        <p>My homepage for CSE391, and the hub for everything I build in the course this semester. I wrote it by hand in <strong>Strict XHTML 1.0</strong>, with one shared stylesheet and a small script.</p>
+        <ul class="feature-list">
+          <li>Dark and light mode, switched by a CSS-only checkbox toggle</li>
+          <li>A contact form that emails me through FormSubmit</li>
+          <li>Scroll and hover animations that switch off if you prefer reduced motion</li>
+          <li>A responsive class routine table with merged cells</li>
+          <li>Passes the W3C markup and CSS validators</li>
+        </ul>
+        <ul class="chips">
+          <li>XHTML 1.0 Strict</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>Font Awesome</li>
+          <li>Nord palette</li>
+        </ul>
+        <p class="btn-row" style="margin-top: 22px;">
+          <a class="btn btn-primary" href="routine.html">See the routine table <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="btn btn-ghost" href="https://validator.w3.org/check?uri=referer" rel="external"><i class="fa-solid fa-circle-check"></i> Validate this page</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== Live list from the GitHub API ========== -->
+<div class="section alt" id="live">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Live from GitHub</p>
+      <h2>Repositories</h2>
+      <p>This list is fetched from the GitHub API each time the page loads, so new repositories show up here on their own.</p>
+    </div>
+    <div id="repo-list" class="repo-list">
+      <p class="loading"><i class="fa-solid fa-circle-notch"></i>Loading repositories from GitHub...</p>
+      <noscript>
+        <p>JavaScript is turned off, so the live list cannot load. You can see every repository at <a href="https://github.com/sakibhossain0?tab=repositories">github.com/sakibhossain0</a>.</p>
+      </noscript>
+    </div>
+  </div>
+</div>
+
+<!-- ========== CSE391 hub ========== -->
+<div class="section tight" id="next">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Coming up</p>
+      <h2>My CSE391 work this semester</h2>
+      <p>This site is where I will collect the web apps I build for the course. Each one gets linked here when it is done.</p>
+    </div>
+    <ol class="next-list reveal">
+      <li><strong>Assignment 1:</strong> personal homepage (you are looking at it) <span class="status-done">Done</span></li>
+      <li><strong>Lab tasks and later assignments:</strong> links will appear here as I finish them.</li>
+    </ol>
+  </div>
+</div>
+
+</div><!-- /#main -->
+
+<!-- ========== Footer ========== -->
+<div class="site-footer" id="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p><a class="brand" href="index.html">Sakib<span class="dot">.</span></a></p>
+        <p class="muted">Md. Sakib Hossain's corner of the web. Hand-written for CSE391 in Strict XHTML 1.0, CSS and a little JavaScript.</p>
+        <p class="socials">
+          <a href="https://github.com/sakibhossain0" rel="external" title="GitHub"><i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span></a>
+          <a href="https://www.linkedin.com/in/sakib-hossain-7829b12a5" rel="external" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span class="sr-only">LinkedIn</span></a>
+          <a href="https://www.facebook.com/sakib.hossain.927415" rel="external" title="Facebook"><i class="fa-brands fa-facebook-f"></i><span class="sr-only">Facebook</span></a>
+          <a href="https://discord.gg/DrbyuXnzH" rel="external" title="CSE 391 Discord"><i class="fa-brands fa-discord"></i><span class="sr-only">CSE 391 Discord</span></a>
+        </p>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="routine.html">Class routine</a></li>
+          <li><a href="#top">Back to top</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>About this page</h3>
+        <p class="page-meta">You are viewing:<code id="page-location">(turn on JavaScript to see this)</code></p>
+        <p class="page-meta">Last modified:<code id="last-modified">(turn on JavaScript to see this)</code></p>
+        <p class="badges">
+          <a href="https://validator.w3.org/check?uri=referer" rel="external"><img src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" width="88" height="31" /></a>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" rel="external"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" width="88" height="31" /></a>
+        </p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright &copy; <span id="year">2026</span> Md. Sakib Hossain. All rights reserved.</p>
+      <p>Made for CSE391: Programming for the Internet, BRAC University</p>
+    </div>
+  </div>
+</div>
+
+<p class="to-top-wrap"><a href="#top" class="to-top" id="to-top" title="Back to top"><i class="fa-solid fa-arrow-up"></i><span class="sr-only">Back to top</span></a></p>
+
+</div><!-- /#page -->
+</div><!-- /#root -->
+
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

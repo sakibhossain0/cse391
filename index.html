@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Md. Sakib Hossain" />
+  <meta name="description" content="Personal homepage of Md. Sakib Hossain, a CSE student at BRAC University from Brahmanbaria who builds web apps and is working toward AI cybersecurity." />
+  <meta name="keywords" content="Md. Sakib Hossain, BRAC University, CSE, CSE391, personal homepage, Brahmanbaria, cybersecurity" />
+  <meta name="theme-color" content="#2E3440" />
+  <title>Md. Sakib Hossain | Home</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Lora:ital,wght@1,400;1,500&amp;display=swap" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- External CSS: the shared stylesheet for every page -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- Internal CSS: small tweaks used only on the home page -->
+  <style type="text/css">
+    .about-side h3 {
+      color: var(--muted);
+      font-family: "JetBrains Mono", Consolas, monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero-photo {
+      display: flex;
+      justify-content: center;
+    }
+    #contact h2 {
+      margin-top: 12px;
+    }
+    .links-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  </style>
+  <script type="text/javascript" src="js/theme-init.js"></script>
+</head>
+
+<body id="top">
+<div id="root">
+
+<!-- Dark/light toggle: this hidden checkbox drives the CSS theme switch -->
+<input type="checkbox" id="theme-switch" class="theme-switch" title="Switch between light and dark mode" />
+
+<div id="page">
+
+<p class="skip-link"><a href="#main">Skip to main content</a></p>
+
+<!-- ========== Header ========== -->
+<div class="site-header" id="header">
+  <div class="wrap">
+    <a class="brand" href="index.html" title="Md. Sakib Hossain, home page">Sakib<span class="dot">.</span><small>CSE @ BRACU</small></a>
+    <div class="nav-area">
+      <div id="site-nav">
+        <ul>
+          <li><a href="index.html" class="current">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="routine.html">Routine</a></li>
+        </ul>
+      </div>
+      <div class="header-tools">
+        <label for="theme-switch" class="theme-toggle" title="Toggle dark and light mode">
+          <span class="when-light"><i class="fa-solid fa-moon"></i> <span class="label">Dark</span></span>
+          <span class="when-dark"><i class="fa-solid fa-sun"></i> <span class="label">Light</span></span>
+        </label>
+        <button type="button" class="nav-btn" id="nav-btn" title="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main">
+
+<!-- ========== Hero: name + photo ========== -->
+<div class="hero" id="home">
+  <div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="hello rise">Hello, I'm<span class="cursor"></span></p>
+      <h1 class="rise delay-1">Md. Sakib <span class="surname">Hossain</span></h1>
+      <p class="lead rise delay-2">I study Computer Science and Engineering at <a href="https://www.bracu.ac.bd/" rel="external">BRAC University</a> and I'm in my 10th semester now. I build web apps, read far too many detective novels, and I'm slowly working my way toward a career in <em>AI and cybersecurity</em>.</p>
+      <p class="btn-row rise delay-3">
+        <a class="btn btn-primary" href="#contact">Get in touch <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="btn btn-ghost" href="projects.html">See my projects</a>
+      </p>
+      <ul class="facts rise delay-4">
+        <li><i class="fa-solid fa-location-dot"></i>Brahmanbaria, Bangladesh</li>
+        <li><i class="fa-solid fa-graduation-cap"></i>CSE, BRAC University</li>
+        <li><i class="fa-solid fa-shield-halved"></i>Aiming for AI security</li>
+      </ul>
+    </div>
+    <div class="hero-photo">
+      <div class="portrait">
+        <span class="ring"></span>
+        <!-- Local image: stored in the images folder -->
+        <img src="images/sakib.jpg" alt="Md. Sakib Hossain smiling and holding a white cat" width="330" height="330" />
+        <span class="tag tag-1"><i class="fa-solid fa-book-open"></i> 10th semester</span>
+        <span class="tag tag-2"><i class="fa-solid fa-cat"></i> plus one fluffy friend</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== Anchor links to sections on this page ========== -->
+<div class="page-nav">
+  <div class="wrap">
+    <p class="label">Jump to</p>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#info">Personal Info</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Technical Skills</a></li>
+      <li><a href="#quote">Favourite Quote</a></li>
+      <li><a href="#links">Links</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== 01 About Me ========== -->
+<div class="section" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">01 / Who I am</p>
+      <h2>About Me</h2>
+    </div>
+    <div class="grid-2">
+      <div class="prose reveal">
+        <p class="first"><strong>Brahmanbaria</strong> is where I grew up, a town on the banks of the <a href="https://en.wikipedia.org/wiki/Titas_River" rel="external">Titas river</a>. I was a science student all the way through school and college. Somewhere in those years the maths and physics turned into curiosity about how computers work, and that is how I ended up in Computer Science and Engineering.</p>
+        <p>Most of my free time goes into stories. I read (mysteries mostly, plus the odd Russian classic), I write poems and short stories, and I watch more TV series than I would like to admit. Whatever time is left goes into building things: websites, apps, small games, or whatever idea refuses to leave me alone that week.</p>
+        <p>My long-term goal is to become an <span style="font-weight: 700; color: var(--accent-strong);">AI cybersecurity expert</span>. Attacks keep getting smarter, and I think machine learning will decide who stays ahead of them. I want to be working on that side of the fight.</p>
+      </div>
+      <div class="card about-side reveal">
+        <h3>Things I'm into</h3>
+        <ul class="list-icons">
+          <li><i class="fa-solid fa-book-open"></i><span><strong>Reading</strong>: Dan Brown, Feluda, Sherlock Holmes, Dostoevsky</span></li>
+          <li><i class="fa-solid fa-pen-nib"></i><span><strong>Writing</strong> poems and short stories</span></li>
+          <li><i class="fa-solid fa-film"></i><span><strong>Films and series</strong>, especially slow, character-driven ones</span></li>
+          <li><i class="fa-solid fa-laptop-code"></i><span><strong>Building</strong> websites, apps and games</span></li>
+          <li><i class="fa-solid fa-futbol"></i><span><strong>Football</strong> and <strong>chess</strong></span></li>
+          <li><i class="fa-solid fa-person-running"></i><span><strong>Running</strong>, with a few marathons done</span></li>
+        </ul>
+        <p class="muted" style="margin: 14px 0 0;">There is more on my <a href="hobbies.html">hobbies page</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 02 Personal Info ========== -->
+<div class="section alt" id="info">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">02 / The basics</p>
+      <h2>Personal Info</h2>
+    </div>
+    <div class="grid-2">
+      <div class="card reveal">
+        <dl class="info">
+          <dt>Full name</dt>
+          <dd>Md. Sakib Hossain</dd>
+          <dt>Hometown</dt>
+          <dd>Brahmanbaria, Bangladesh</dd>
+          <dt>Background</dt>
+          <dd>Science (SSC and HSC), now CSE</dd>
+          <dt>University</dt>
+          <dd>BRAC University, Dhaka</dd>
+          <dt>Student ID</dt>
+          <dd>23101316</dd>
+          <dt>Semester</dt>
+          <dd>10th (Fall 2026)</dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:md.sakib.hossain2@gmail.com">md.sakib.hossain2@gmail.com</a></dd>
+          <dt>Discord</dt>
+          <dd>sakibhossain_</dd>
+          <dt>Goal</dt>
+          <dd>AI cybersecurity expert</dd>
+        </dl>
+      </div>
+      <div class="card reveal">
+        <h3><i class="fa-solid fa-calendar-days hl"></i> This semester</h3>
+        <ul class="course-mini">
+          <li><span class="code">CSE391</span><span>Programming for the Internet</span></li>
+          <li><span class="code">CSE341</span><span>Microprocessors</span></li>
+          <li><span class="code">CSE470</span><span>Software Engineering</span></li>
+          <li><span class="code">SOC101</span><span>Introduction to Sociology</span></li>
+        </ul>
+        <p>Questions about the CSE391 labs usually go to our <a href="https://discord.gg/DrbyuXnzH" rel="external">CSE 391 Discord server</a>.</p>
+        <p style="margin: 0;"><a class="btn btn-ghost" href="routine.html">Full class routine <i class="fa-solid fa-arrow-right"></i></a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 03 Education ========== -->
+<div class="section" id="education">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">03 / Where I studied</p>
+      <h2>Education</h2>
+      <p>Science at school and college, then engineering at university.</p>
+    </div>
+    <ol class="timeline">
+      <li class="reveal">
+        <span class="node"><i class="fa-solid fa-building-columns"></i></span>
+        <div class="card lift">
+          <div class="edu-head">
+            <div>
+              <span class="year">2023 to now</span>
+              <h3>BRAC University</h3>
+              <p class="muted" style="margin: 0;">B.Sc. in Computer Science and Engineering</p>
+            </div>
+            <!-- Image linked from the web (Wikimedia) -->
+            <span class="logo-tile"><img src="https://upload.wikimedia.org/wikipedia/en/4/40/BRAC_University_monogram.svg" alt="BRAC University logo" width="54" height="52" /></span>
+          </div>
+          <p style="margin: 12px 0 0;">I'm in my <strong>10th semester</strong>. My database course (CSE370) is where the <a href="projects.html#pet-adoption">Pet Adoption Management System</a> came from, and this website is my first assignment for CSE391.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="node"><i class="fa-solid fa-school"></i></span>
+        <div class="card lift">
+          <span class="year">HSC, 2021</span>
+          <h3>Brahmanbaria Government College</h3>
+          <p class="muted" style="margin: 0;">Higher Secondary Certificate, Science group</p>
+          <span class="gpa">GPA 5.00 / 5.00</span>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="node"><i class="fa-solid fa-book"></i></span>
+        <div class="card lift">
+          <span class="year">SSC, 2019</span>
+          <h3>Annada Government High School</h3>
+          <p class="muted" style="margin: 0;">Secondary School Certificate, Science group, Brahmanbaria</p>
+          <span class="gpa">GPA 5.00 / 5.00</span>
+        </div>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<!-- ========== 04 Technical Skills ========== -->
+<div class="section alt" id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">04 / What I work with</p>
+      <h2>Technical Skills</h2>
+      <p>This is the same stack I list on my <a href="https://github.com/sakibhossain0" rel="external">GitHub profile</a>. I learned most of it while building the things on my <a href="projects.html">projects page</a>.</p>
+    </div>
+    <div class="grid-auto">
+      <div class="card lift skill-card reveal">
+        <span class="icon-tile"><i class="fa-solid fa-code"></i></span>
+        <h3>Languages</h3>
+        <ul class="chips">
+          <li>PHP</li>
+          <li>JavaScript</li>
+          <li>SQL</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+        </ul>
+      </div>
+      <div class="card lift skill-card reveal">
+        <span class="icon-tile"><i class="fa-solid fa-layer-group"></i></span>
+        <h3>Frameworks</h3>
+        <ul class="chips">
+          <li>Laravel</li>
+          <li>Node.js</li>
+          <li>React</li>
+          <li>Tailwind CSS</li>
+          <li>Blade</li>
+        </ul>
+      </div>
+      <div class="card lift skill-card reveal">
+        <span class="icon-tile"><i class="fa-solid fa-database"></i></span>
+        <h3>Data and mobile</h3>
+        <ul class="chips">
+          <li>MySQL</li>
+          <li>Android</li>
+          <li>ER modelling</li>
+          <li>Normalization</li>
+        </ul>
+      </div>
+      <div class="card lift skill-card reveal">
+        <span class="icon-tile"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+        <h3>Tools</h3>
+        <ul class="chips">
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>Vite</li>
+          <li>XAMPP</li>
+          <li>Draw.io</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Images linked from the web: the badges from my GitHub README -->
+    <div class="badges-row reveal">
+      <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&amp;logo=php&amp;logoColor=white" alt="PHP" height="28" />
+      <img src="https://img.shields.io/badge/Laravel-F9322C?style=for-the-badge&amp;logo=laravel&amp;logoColor=white" alt="Laravel" height="28" />
+      <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&amp;logo=nodedotjs&amp;logoColor=white" alt="Node.js" height="28" />
+      <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&amp;logo=mysql&amp;logoColor=white" alt="MySQL" height="28" />
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black" alt="JavaScript" height="28" />
+      <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&amp;logo=tailwind-css&amp;logoColor=white" alt="Tailwind CSS" height="28" />
+      <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&amp;logo=android&amp;logoColor=white" alt="Android" height="28" />
+      <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&amp;logo=html5&amp;logoColor=white" alt="HTML5" height="28" />
+      <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&amp;logo=css3&amp;logoColor=white" alt="CSS3" height="28" />
+    </div>
+    <p class="note reveal"><strong>Next on my list:</strong> machine learning and network security. That is where the AI cybersecurity goal really starts.</p>
+  </div>
+</div>
+
+<!-- ========== 05 Favourite Quote ========== -->
+<div class="quote-band" id="quote">
+  <div class="wrap reveal">
+    <p class="eyebrow">05 / Words I keep coming back to</p>
+    <h2>Favourite Quote</h2>
+    <span class="quote-mark"><i class="fa-solid fa-quote-left"></i></span>
+    <blockquote cite="https://en.wikipedia.org/wiki/Dead_Poets_Society">
+      <p>Only in their dreams can men be <strong>truly free</strong>. 'Twas always thus, and always thus will be.</p>
+      <p class="by">Tom Schulman, <cite>Dead Poets Society</cite> (1989)</p>
+    </blockquote>
+    <p class="why">Dead Poets Society is my favourite film, and this is the line from it that stayed with me.</p>
+  </div>
+</div>
+
+<!-- ========== 06 Categorized links ========== -->
+<div class="section" id="links">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">06 / Around the web</p>
+      <h2>Categorized Links</h2>
+      <p>Pages on this site and places elsewhere that I use, grouped by what they are for.</p>
+    </div>
+    <div class="grid-auto links-grid">
+      <div class="card lift link-card reveal">
+        <span class="icon-tile"><i class="fa-solid fa-book-open"></i></span>
+        <h3>Hobbies</h3>
+        <ul>
+          <li><a href="hobbies.html#reading">Books on my shelf</a><span>Feluda, Dan Brown and more</span></li>
+          <li><a href="hobbies.html#screen">Films and series I love</a><span>Dead Poets Society, Breaking Bad and others</span></li>
+          <li><a href="https://www.goodreads.com/" rel="external">Goodreads</a><span>Book reviews and reading lists</span></li>
+          <li><a href="https://www.imdb.com/title/tt0097165/" rel="external">Dead Poets Society on IMDb</a><span>My favourite film</span></li>
+        </ul>
+      </div>
+      <div class="card lift link-card reveal">
+        <span class="icon-tile"><i class="fa-solid fa-futbol"></i></span>
+        <h3>Sports</h3>
+        <ul>
+          <li><a href="hobbies.html#sports">Football, chess and running</a><span>The sporty side of me</span></li>
+          <li><a href="https://lichess.org/" rel="external">Lichess</a><span>Free, open-source online chess</span></li>
+          <li><a href="https://www.fifa.com/" rel="external">FIFA</a><span>Fixtures and football news</span></li>
+        </ul>
+      </div>
+      <div class="card lift link-card reveal">
+        <span class="icon-tile"><i class="fa-solid fa-robot"></i></span>
+        <h3>Extracurricular</h3>
+        <ul>
+          <li><a href="https://www.bracucc.org/" rel="external">BRAC University Computer Club</a><span>Workshops, contests and tech events</span></li>
+          <li><a href="https://www.thedailystar.net/node/115135" rel="external">BRACU Robotics Club (ROBU)</a><span>A Daily Star feature on the club's projects</span></li>
+          <li><a href="hobbies.html#clubs">My clubs and marathons</a><span>What I do outside class</span></li>
+        </ul>
+      </div>
+      <div class="card lift link-card reveal">
+        <span class="icon-tile"><i class="fa-solid fa-building-columns"></i></span>
+        <h3>University</h3>
+        <ul>
+          <li><a href="https://www.bracu.ac.bd/" rel="external">BRAC University</a><span>The official university website</span></li>
+          <li><a href="https://discord.gg/DrbyuXnzH" rel="external">CSE 391 Discord</a><span>Course announcements and lab help</span></li>
+          <li><a href="routine.html">Fall 2026 class routine</a><span>My classes and exam dates</span></li>
+        </ul>
+      </div>
+      <div class="card lift link-card reveal">
+        <span class="icon-tile"><i class="fa-solid fa-at"></i></span>
+        <h3>Find me online</h3>
+        <ul>
+          <li><a href="https://github.com/sakibhossain0" rel="external">GitHub</a><span>sakibhossain0</span></li>
+          <li><a href="https://www.linkedin.com/in/sakib-hossain-7829b12a5" rel="external">LinkedIn</a><span>Sakib Hossain</span></li>
+          <li><a href="https://www.facebook.com/sakib.hossain.927415" rel="external">Facebook</a><span>Sakib Hossain</span></li>
+          <li><a href="mailto:md.sakib.hossain2@gmail.com">Email</a><span>md.sakib.hossain2@gmail.com</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 07 Contact (bonus: form that sends an email) ========== -->
+<div class="section alt" id="contact">
+  <div class="wrap">
+    <div class="grid-2">
+      <div class="reveal">
+        <p class="eyebrow">07 / Say hello</p>
+        <h2>Contact Me</h2>
+        <p class="muted">Want to talk about a project, recommend a book, or team up for a CSE391 lab? Send me a message. The form delivers it straight to my inbox.</p>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-envelope"></i><a href="mailto:md.sakib.hossain2@gmail.com">md.sakib.hossain2@gmail.com</a></li>
+          <li><i class="fa-brands fa-discord"></i><span>sakibhossain_ on Discord</span></li>
+          <li><i class="fa-solid fa-location-dot"></i><span>BRAC University, Dhaka</span></li>
+        </ul>
+        <p class="socials">
+          <a href="https://github.com/sakibhossain0" rel="external" title="GitHub"><i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span></a>
+          <a href="https://www.linkedin.com/in/sakib-hossain-7829b12a5" rel="external" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span class="sr-only">LinkedIn</span></a>
+          <a href="https://www.facebook.com/sakib.hossain.927415" rel="external" title="Facebook"><i class="fa-brands fa-facebook-f"></i><span class="sr-only">Facebook</span></a>
+          <a href="mailto:md.sakib.hossain2@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i><span class="sr-only">Email</span></a>
+        </p>
+      </div>
+
+      <form id="contact-form" class="card contact-form reveal" action="https://formsubmit.co/md.sakib.hossain2@gmail.com" method="post" accept-charset="utf-8">
+        <fieldset>
+          <legend>Send me a message</legend>
+          <input type="hidden" name="_subject" id="cf-subject-hidden" value="New message from your CSE391 homepage" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <div class="hp-field"><label for="cf-honey">Leave this field empty</label><input type="text" name="_honey" id="cf-honey" value="" tabindex="-1" /></div>
+          <div class="field">
+            <label for="cf-name">Your name</label>
+            <input type="text" id="cf-name" name="name" maxlength="80" />
+            <span class="error-msg" id="err-name"></span>
+          </div>
+          <div class="field">
+            <label for="cf-email">Your email</label>
+            <input type="text" id="cf-email" name="email" maxlength="120" />
+            <span class="error-msg" id="err-email"></span>
+          </div>
+          <div class="field">
+            <label for="cf-subject">Subject <span class="muted">(optional)</span></label>
+            <input type="text" id="cf-subject" name="subject" maxlength="120" />
+            <span class="error-msg" id="err-subject"></span>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="6" cols="40"></textarea>
+            <span class="error-msg" id="err-message"></span>
+          </div>
+          <p class="btn-row"><button type="submit" class="btn btn-primary" id="cf-send"><i class="fa-solid fa-paper-plane"></i> Send message</button></p>
+          <p class="form-status" id="form-status"></p>
+          <p class="form-note">Messages are delivered by <a href="https://formsubmit.co/" rel="external">FormSubmit</a>. I only use your email to reply.</p>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+
+</div><!-- /#main -->
+
+<!-- ========== Footer ========== -->
+<div class="site-footer" id="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p><a class="brand" href="index.html">Sakib<span class="dot">.</span></a></p>
+        <p class="muted">Md. Sakib Hossain's corner of the web. Hand-written for CSE391 in Strict XHTML 1.0, CSS and a little JavaScript.</p>
+        <p class="socials">
+          <a href="https://github.com/sakibhossain0" rel="external" title="GitHub"><i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span></a>
+          <a href="https://www.linkedin.com/in/sakib-hossain-7829b12a5" rel="external" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span class="sr-only">LinkedIn</span></a>
+          <a href="https://www.facebook.com/sakib.hossain.927415" rel="external" title="Facebook"><i class="fa-brands fa-facebook-f"></i><span class="sr-only">Facebook</span></a>
+          <a href="https://discord.gg/DrbyuXnzH" rel="external" title="CSE 391 Discord"><i class="fa-brands fa-discord"></i><span class="sr-only">CSE 391 Discord</span></a>
+        </p>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="routine.html">Class routine</a></li>
+          <li><a href="#top">Back to top</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>About this page</h3>
+        <p class="page-meta">You are viewing:<code id="page-location">(turn on JavaScript to see this)</code></p>
+        <p class="page-meta">Last modified:<code id="last-modified">(turn on JavaScript to see this)</code></p>
+        <p class="badges">
+          <a href="https://validator.w3.org/check?uri=referer" rel="external"><img src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" width="88" height="31" /></a>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" rel="external"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" width="88" height="31" /></a>
+        </p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright &copy; <span id="year">2026</span> Md. Sakib Hossain. All rights reserved.</p>
+      <p>Made for CSE391: Programming for the Internet, BRAC University</p>
+    </div>
+  </div>
+</div>
+
+<p class="to-top-wrap"><a href="#top" class="to-top" id="to-top" title="Back to top"><i class="fa-solid fa-arrow-up"></i><span class="sr-only">Back to top</span></a></p>
+
+</div><!-- /#page -->
+</div><!-- /#root -->
+
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
