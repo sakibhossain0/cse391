@@ -14,6 +14,8 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <!-- External CSS: the shared stylesheet for every page -->
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- External CSS: Assignment 2 styles (the fortune box) -->
+  <link rel="stylesheet" type="text/css" href="css/apps.css" />
   <!-- Internal CSS: small tweaks used only on the home page -->
   <style type="text/css">
     .about-side h3 {
@@ -58,6 +60,8 @@
           <li><a href="projects.html">Projects</a></li>
           <li><a href="hobbies.html">Hobbies</a></li>
           <li><a href="routine.html">Routine</a></li>
+          <li><a href="stopwatch.html">Stopwatch</a></li>
+          <li><a href="todo.html">To-Do</a></li>
         </ul>
       </div>
       <div class="header-tools">
@@ -84,6 +88,7 @@
       <p class="btn-row rise delay-3">
         <a class="btn btn-primary" href="#contact">Get in touch <i class="fa-solid fa-arrow-right"></i></a>
         <a class="btn btn-ghost" href="projects.html">See my projects</a>
+        <a class="btn btn-ghost" href="#fortune">Today's fortune <i class="fa-solid fa-arrow-down"></i></a>
       </p>
       <ul class="facts rise delay-4">
         <li><i class="fa-solid fa-location-dot"></i>Brahmanbaria, Bangladesh</li>
@@ -115,6 +120,7 @@
       <li><a href="#quote">Favourite Quote</a></li>
       <li><a href="#links">Links</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#fortune">Fortune</a></li>
     </ul>
   </div>
 </div>
@@ -369,6 +375,15 @@
         </ul>
       </div>
       <div class="card lift link-card reveal">
+        <span class="icon-tile"><i class="fa-solid fa-laptop-code"></i></span>
+        <h3>My CSE391 apps</h3>
+        <ul>
+          <li><a href="#fortune">Fortune generator</a><span>A new fortune at the bottom of this page on every visit</span></li>
+          <li><a href="stopwatch.html">Stopwatch</a><span>Counts in steps of 3 seconds, up to 30</span></li>
+          <li><a href="todo.html">To-do list</a><span>Tasks that stay saved in your browser</span></li>
+        </ul>
+      </div>
+      <div class="card lift link-card reveal">
         <span class="icon-tile"><i class="fa-solid fa-at"></i></span>
         <h3>Find me online</h3>
         <ul>
@@ -439,6 +454,30 @@
   </div>
 </div>
 
+<!-- ========== 08 Fortune generator (Assignment 2, Question 1) ==========
+     Centred box just above the footer. js/fortune.js puts a random
+     fortune in it on every page load; the four colour buttons beside
+     it change its colours, font size and font family. -->
+<div class="fortune-band" id="fortune">
+  <div class="wrap">
+    <p class="eyebrow">08 / Assignment 2, Question 1</p>
+    <h2>Fortune Generator</h2>
+    <p class="how">A new fortune appears every time this page loads. Each colour button beside the box changes the text colour, the box's background and border colours, and the font size and family.</p>
+    <p class="refs-line">References: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" rel="external">MDN Math.random()</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style" rel="external">MDN HTMLElement.style</a>, <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" rel="external">WCAG contrast</a></p>
+    <div class="fortune-row">
+      <div class="fortune-box" id="fortune-box">
+        <p class="fortune-text" id="fortune-text">Turn on JavaScript to see your fortune.</p>
+      </div>
+      <div class="fortune-buttons">
+        <button type="button" class="swatch swatch-green" id="look-green" title="Green look"><span class="sr-only">Green look</span></button>
+        <button type="button" class="swatch swatch-yellow" id="look-yellow" title="Yellow look"><span class="sr-only">Yellow look</span></button>
+        <button type="button" class="swatch swatch-blue" id="look-blue" title="Blue look"><span class="sr-only">Blue look</span></button>
+        <button type="button" class="swatch swatch-orange" id="look-orange" title="Orange look"><span class="sr-only">Orange look</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div><!-- /#main -->
 
 <!-- ========== Footer ========== -->
@@ -447,7 +486,7 @@
     <div class="footer-grid">
       <div>
         <p><a class="brand" href="index.html">Sakib<span class="dot">.</span></a></p>
-        <p class="muted">Md. Sakib Hossain's corner of the web. Hand-written for CSE391 in Strict XHTML 1.0, CSS and a little JavaScript.</p>
+        <p class="muted">Md. Sakib Hossain's corner of the web. Built for CSE391 in Strict XHTML 1.0, CSS and plain JavaScript.</p>
         <p class="socials">
           <a href="https://github.com/sakibhossain0" rel="external" title="GitHub"><i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span></a>
           <a href="https://www.linkedin.com/in/sakib-hossain-7829b12a5" rel="external" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span class="sr-only">LinkedIn</span></a>
@@ -462,6 +501,8 @@
           <li><a href="projects.html">Projects</a></li>
           <li><a href="hobbies.html">Hobbies</a></li>
           <li><a href="routine.html">Class routine</a></li>
+          <li><a href="stopwatch.html">Stopwatch</a></li>
+          <li><a href="todo.html">To-do list</a></li>
           <li><a href="#top">Back to top</a></li>
         </ul>
       </div>
@@ -488,5 +529,6 @@
 </div><!-- /#root -->
 
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/fortune.js"></script>
 </body>
 </html>

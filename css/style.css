@@ -32,6 +32,7 @@
   --green: #A3BE8C;
   --purple: #B48EAD;
   --gold-text: #8A6D1F;
+  --red-text: #A3434D;
   --on-accent: #FFFFFF;
   --header-bg: rgba(236, 239, 244, 0.86);
   --stripe: #F2F4F8;
@@ -58,6 +59,7 @@ html.preload-dark #page {
   --accent-soft: rgba(136, 192, 208, 0.14);
   --link: #88C0D0;
   --gold-text: #EBCB8B;
+  --red-text: #E8A0A7;
   --on-accent: #2E3440;
   --header-bg: rgba(46, 52, 64, 0.86);
   --stripe: #343A47;
@@ -1291,7 +1293,7 @@ dl.info dd {
   display: block;
   min-height: 1.2em;
   margin-top: 4px;
-  color: var(--red);
+  color: var(--red-text);
   font-size: 0.84rem;
   font-weight: 600;
 }
@@ -2055,6 +2057,28 @@ table.exams tr.next-up td:not(.exam-type) {
 
 
 /* ---------- 15. Responsive layout ---------- */
+
+/* six nav links since Assignment 2: on mid-size screens drop the
+   small tagline and tighten the links so the header stays on one line */
+@media (min-width: 761px) and (max-width: 1060px) {
+  .brand small {
+    display: none;
+  }
+
+  #site-nav a {
+    padding: 8px 11px;
+    white-space: nowrap;
+  }
+
+  #site-nav a::after {
+    left: 11px;
+    right: 11px;
+  }
+
+  .theme-toggle {
+    white-space: nowrap;
+  }
+}
 
 @media (max-width: 980px) {
   .hero .wrap {

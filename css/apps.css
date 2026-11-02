@@ -1,0 +1,486 @@
+/* ============================================================
+   Md. Sakib Hossain - CSE391 Assignment 2: JavaScript apps
+   Styles for the fortune box (home page), the stopwatch and the
+   to-do list. Loaded after style.css, so it reuses the same Nord
+   colour tokens and follows the dark/light toggle.
+   ============================================================ */
+
+
+/* ---------- 1. Shared by the app pages ---------- */
+
+/* stopwatch buttons that can't be pressed right now */
+.stopwatch .btn:disabled,
+.stopwatch .btn:disabled:hover {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.stopwatch .btn-primary:disabled:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.stopwatch .btn-ghost:disabled:hover {
+  background: transparent;
+}
+
+.stopwatch .btn:disabled:hover i {
+  transform: none;
+}
+
+.section .app-card h2 {
+  margin: 10px 0 14px;
+  font-size: 1.35rem;
+}
+
+/* "References" list under each app */
+.refs-title {
+  margin: 26px 0 10px;
+  font-size: 1rem;
+}
+
+.refs {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.refs li {
+  margin-bottom: 6px;
+}
+
+
+/* ---------- 2. Question 1: fortune box (home page) ---------- */
+
+.fortune-band {
+  padding: 64px 0 72px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  scroll-margin-top: 120px;
+}
+
+.fortune-band h2 {
+  margin: 12px 0 8px;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  letter-spacing: -0.03em;
+}
+
+.fortune-band .how {
+  max-width: 36em;
+  margin: 0 auto 10px;
+  color: var(--muted);
+}
+
+.fortune-band .refs-line {
+  margin: 0 auto 30px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Three columns: empty | box | buttons. The box sits in the middle
+   column, so it is truly centred, and the buttons sit beside it. */
+.fortune-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 620px) minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.fortune-box {
+  grid-column: 2;
+  padding: 26px 30px;
+  border: 3px solid var(--accent);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+
+.fortune-text {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: color 0.35s ease, font-size 0.35s ease;
+}
+
+.fortune-buttons {
+  grid-column: 3;
+  justify-self: start;
+  display: grid;
+  grid-template-columns: repeat(2, 42px);
+  gap: 10px;
+}
+
+/* the colour buttons; fortune.js paints each one in the colours of
+   the look it applies, so they work as tiny previews */
+.swatch {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 3px solid var(--line-strong);
+  border-radius: 10px;
+  background: var(--surface);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.swatch:hover {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: var(--shadow);
+}
+
+.swatch.is-active {
+  box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--text);
+}
+
+
+/* ---------- 3. Question 2: stopwatch ---------- */
+
+.stopwatch {
+  text-align: center;
+}
+
+.sw-face {
+  margin: 0 0 22px;
+  padding: 30px 16px 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--bg-soft);
+}
+
+.sw-time {
+  margin: 0;
+  color: var(--text);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: clamp(3.4rem, 13vw, 5.6rem);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  transition: color 0.3s ease;
+}
+
+.stopwatch.is-running .sw-time {
+  color: var(--accent-strong);
+}
+
+.stopwatch.is-finished .sw-time {
+  color: var(--red-text);
+}
+
+.sw-label {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ten segments, one for every 3 seconds up to 30 */
+.sw-steps {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 6px;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.sw-steps li {
+  padding-top: 6px;
+  border-top: 6px solid var(--line);
+  color: var(--muted);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.72rem;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.sw-steps li.done {
+  border-top-color: var(--accent);
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* the segment the stopwatch is counting towards blinks while it runs */
+.sw-steps li.next {
+  animation: step-blink 1s ease-in-out infinite;
+}
+
+.stopwatch.is-finished .sw-steps li.done {
+  border-top-color: var(--red-text);
+}
+
+.sw-status {
+  min-height: 1.7em;
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.stopwatch .btn-row {
+  justify-content: center;
+}
+
+@keyframes step-blink {
+  0%, 100% { border-top-color: var(--line); }
+  50%      { border-top-color: var(--frost); }
+}
+
+
+/* ---------- 4. Question 3: to-do list ---------- */
+
+/* min-width: 0 stops the fieldset growing wider than the card on phones */
+.todo-form fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.todo-form legend {
+  margin-bottom: 6px;
+  padding: 0;
+  color: var(--text-2);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.todo-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.todo-add {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-add input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* browsers draw placeholders very faintly; this keeps them readable */
+.todo-add input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.todo-add input:hover {
+  border-color: var(--line-strong);
+}
+
+.todo-add input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--surface);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.todo-form.has-error .todo-add input {
+  border-color: var(--red);
+}
+
+.todo-add .btn {
+  flex-shrink: 0;
+}
+
+.todo-summary {
+  margin: 18px 0 12px;
+  color: var(--muted);
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding: 10px 10px 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-2);
+  animation: rise 0.35s ease both;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.todo-item:hover {
+  border-color: var(--line-strong);
+}
+
+/* the label wraps the checkbox and the text, so clicking the text
+   ticks the box too */
+.todo-item label {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.todo-item input {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.todo-text {
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+.todo-item.done .todo-text {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.todo-delete {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-2);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.todo-delete:hover {
+  border-color: #A3434D;
+  background: #A3434D;
+  color: #FFFFFF;
+}
+
+/* hidden until todo.js finds the list empty */
+.todo-empty {
+  display: none;
+  margin: 0;
+  padding: 26px 16px;
+  border: 2px dashed var(--line);
+  border-radius: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.todo-empty i {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+.storage-warning {
+  margin: 14px 0 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(191, 97, 106, 0.16);
+  color: var(--text);
+  font-weight: 600;
+}
+
+
+/* ---------- 5. Smaller screens ---------- */
+
+@media (max-width: 900px) {
+  /* No room for an empty column any more, so two buttons go on each
+     side of the box: it stays centred and the buttons stay beside it.
+     "display: contents" lets the four buttons join the outer grid. */
+  .fortune-row {
+    grid-template-columns: auto minmax(0, 620px) auto;
+    justify-content: center;
+    gap: 10px 12px;
+  }
+
+  .fortune-buttons {
+    display: contents;
+  }
+
+  .fortune-box {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    padding: 20px;
+  }
+
+  .swatch-green {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+  }
+
+  .swatch-yellow {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  .swatch-blue {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: end;
+  }
+
+  .swatch-orange {
+    grid-column: 3;
+    grid-row: 2;
+    align-self: start;
+  }
+}
+
+@media (max-width: 420px) {
+  .swatch {
+    width: 36px;
+    height: 36px;
+  }
+
+  .sw-steps {
+    gap: 3px;
+  }
+
+  .sw-steps li {
+    font-size: 0.62rem;
+  }
+
+  /* .btn goes full width at this size (style.css), but the Add
+     button has to stay beside the input */
+  .todo-add .btn {
+    width: auto;
+  }
+
+  .todo-delete .label {
+    display: none;
+  }
+}
