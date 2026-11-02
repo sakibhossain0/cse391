@@ -1,1 +1,58 @@
+============================================================
+           AI USAGE DECLARATION
+============================================================
 
+Name:MD SAKIB HOSSAIN
+Student ID: 23101316
+Assignment: 2
+Date: 3/11/26
+
+------------------------------------------------------------
+1. AI TOOLS USED (check all that apply)
+------------------------------------------------------------
+[ ] None
+[ ] ChatGPT
+[ ] GitHub Copilot
+[ ] Google Gemini
+[X] Claude
+[ ] Cursor
+[ ] Other: ________________
+
+------------------------------------------------------------
+2. PURPOSE OF AI USE (check all that apply)
+------------------------------------------------------------
+[X] Learning/understanding concepts
+[ ] Debugging my code
+[ ] Generating code snippets
+[X] Writing text content
+[ ] Design/styling ideas
+[ ] Image generation
+[ ] Other: ________________
+
+------------------------------------------------------------
+3. DESCRIPTION OF AI USE
+------------------------------------------------------------
+Briefly describe what you used AI for and how: I USED CLAUDE CODE TO UNDERTAND ALL THE CONCEPT AND WRITING THE EXPLANATION COMMENT IN MY CODE. THE PROMPT WAS :
+1. HELP ME UNDERSTAND ALL THE CONCEPT FOR THIS ASSIGNMENT AND GIVE ME LINKS WITH THE RESOURCES AND REFERENCE 
+2. WRITE THE EXPLATION TEXT FOR EACH FUNCTION IN THE CODE
+
+------------------------------------------------------------
+4. AI-ASSISTED SECTIONS
+------------------------------------------------------------
+List specific files/sections where AI helped significantly:
+
+File: fortune.js Section: all
+File: stopwatch.js Section: all
+File: todo.js Section: all
+
+------------------------------------------------------------
+5. DECLARATION
+------------------------------------------------------------
+I declare that:
+- This disclosure is complete and accurate
+- I understand all code in my submission
+- I can explain and modify my work if asked
+- I take full responsibility for my submission
+
+Signature: MD SAKIB HOSSAIN
+Date: 2/11/26
