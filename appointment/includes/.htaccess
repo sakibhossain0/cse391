@@ -1,0 +1,9 @@
+# The files in this folder are only loaded by the pages, never opened
+# directly, so the web server refuses every request for them.
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>

@@ -1,0 +1,8 @@
+# The SQL files are for phpMyAdmin only; the web server never serves them.
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>
