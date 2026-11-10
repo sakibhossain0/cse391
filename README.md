@@ -37,7 +37,7 @@ My coursework hub for **CSE391 at BRAC University (Fall 2026)**: a personal home
 |---|---|---|---|---|
 | 1 | Personal homepage | A four-page personal site with dark mode, a contact form and CSS animations | [Home page](https://sakibhossain0.github.io/cse391/) | Done |
 | 2 | JavaScript programming | A fortune generator, a stopwatch and a to-do list | [Fortune](https://sakibhossain0.github.io/cse391/#fortune) · [Stopwatch](https://sakibhossain0.github.io/cse391/stopwatch.html) · [To-do list](https://sakibhossain0.github.io/cse391/todo.html) | Done |
-| 3 | PHP and MySQL project | A car workshop appointment system with a user panel, an admin panel and help | Live link coming soon (it needs a PHP host) · [source](appointment/) | Built |
+| 3 | PHP and MySQL project | A car workshop appointment system with a user panel, an admin panel and help | [Booking](https://sakib-workshop.page.gd/) · [Admin](https://sakib-workshop.page.gd/admin/) · [source](appointment/) | Done |
 | | Labs and later assignments | Added here as I finish them | | Coming up |
 
 ## Assignment 1: Personal homepage
@@ -103,7 +103,7 @@ Three small apps in plain JavaScript that practise arrays, DOM manipulation, eve
 
 An online appointment system for a car workshop with 5 senior mechanics, each of whom takes at most 4 cars a day. Clients book the mechanic they want without visiting the workshop, and the workshop's admin manages the appointments. Built with HTML, CSS, JavaScript, PHP and MySQL.
 
-Live link coming soon · source in [`appointment/`](appointment/)
+**Live site:** https://sakib-workshop.page.gd/ (admin panel: https://sakib-workshop.page.gd/admin/) · source in [`appointment/`](appointment/)
 
 ### User panel ([`appointment/index.php`](appointment/index.php))
 
@@ -240,7 +240,7 @@ Then open `http://localhost:8000` in your browser. You can also open `index.html
 
 ## Deployment
 
-GitHub Pages serves Assignments 1 and 2 from the root of the `main` branch. Every push to `main` republishes them within about a minute, through GitHub's built-in `pages-build-deployment` workflow. Assignment 3 needs PHP, so it runs on a separate PHP host (see [Put it online](#put-it-online)).
+GitHub Pages serves Assignments 1 and 2 from the root of the `main` branch. Every push to `main` republishes them within about a minute, through GitHub's built-in `pages-build-deployment` workflow. Assignment 3 needs PHP, so it runs on a free [InfinityFree](https://www.infinityfree.com/) PHP and MySQL host at https://sakib-workshop.page.gd/ (see [Put it online](#put-it-online)). Pushing to GitHub doesn't update it: changed files are uploaded to the host by FTP.
 
 ## Credits and references
 
